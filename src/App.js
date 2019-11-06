@@ -5,10 +5,15 @@ import Discover from './components/Discover';
 import PreviousDates from './components/PreviousDates';
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import moment from "moment";
 
 function App() {
 
   function formatDate() {
+    let today = new Date();
+    let todayStr = moment(today).format('YYYY-MM-DD');
+
+    return todayStr;
   }
 
   const [photoState, setPhotoState] = useState();
