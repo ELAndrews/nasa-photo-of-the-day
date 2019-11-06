@@ -31,3 +31,19 @@
     transform: rotate(360deg);
   }
 }
+
+.pictureCard {
+  line-height: 1.6;
+  width: 80%;
+  max-width: 800px;
+  margin: 0px auto;
+}
+
+.mainPhoto {
+  width: 100%
+}
+
+.photoInfo {
+  padding: 0px 40px;
+  text-align: left;
+}

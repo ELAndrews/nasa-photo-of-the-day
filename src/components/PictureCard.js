@@ -5,12 +5,13 @@ function PictureCard(props) {
 
 console.log(props);
   return (
-    <div>
-      <h2> {props.photoData.title} </h2>
-      <img src={props.photoState} alt={props.photoData.title}/>
+    <div className="pictureCard">
+      <h1> {props.photoData.title} </h1>
+      <span> {props.photoData.date} </span>
+      <img className="mainPhoto" src={props.photoState} alt={props.photoData.title}/>
       <div>
         <h3>{props.photoData.title} : Info</h3>
-        <p>{props.photoData.explanation}</p>
+        <p className="photoInfo">{props.photoData.explanation}</p>
       </div>
     </div>
   );
