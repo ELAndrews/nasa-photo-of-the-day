@@ -7,10 +7,10 @@ function PreviousDates() {
   return (
     <div className="previousDates">
       <div className="previousCards">
+        {/* <PreviousPictureCard />
         <PreviousPictureCard />
         <PreviousPictureCard />
-        <PreviousPictureCard />
-        <PreviousPictureCard />
+        <PreviousPictureCard /> */}
       </div>
     </div>
   );

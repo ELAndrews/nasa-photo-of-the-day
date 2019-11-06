@@ -36,12 +36,14 @@ function App() {
       })
       .catch(error => {
         console.log(`error collecting data`)
+        alert(`You have selected a date in the future. Please select a different date.`)
       })
-  }, [nasaAPI]) 
+  }, [nasaAPI]);
 
-  console.log(selectedDate);
+  
 
-  return (
+  
+  return ( 
     <div className="App">
       <Discover 
       setSelectedDate={setSelectedDate}/>
