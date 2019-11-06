@@ -1,32 +1,35 @@
-import React, { useState, useEffect } from "react";
 import "./App.css";
 import Header from './components/Header';
 import PictureCard from './components/PictureCard';
-import PreviousDates from './components/PreviousDates';
+// import PreviousDates from './components/PreviousDates';
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-
 
 function App() {
 
-    const [photoState, setPhotoState] = useState([]);
-    const [pastPhotoState, setPastPhotoState] = useState([]);
+  const [photoState, setPhotoState] = useState();
+  const [photoData, setPhotoData] = useState([]);
 
-    useEffect(() => {
-      axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
-        .then(response => {
-          console.log(response);
-        })
-        .catch(error => {
-          console.log(`error collecting data`)
-        })
-    }, [])
-
+  useEffect(() => {
+    axios.get('https://api.nasa.gov/planetary/apod?api_key=LCCfcQ7MrlhZtpsB5uODfmnWcq2zisNRnKwGnvjm')
+      .then(response => {
+        console.log(response)
+        setPhotoState(response.data.hdurl)
+        setPhotoData(response.data)
+      })
+      .catch(error => {
+        console.log(`error collecting data`)
+      })
+  }, []) 
 
   return (
     <div className="App">
-      <Header />
-      <PictureCard />
-      <PreviousDates /> 
+      <Header 
+       photoData = {photoData}/>
+      <PictureCard 
+      photoState = {photoState}
+      photoData = {photoData}/>
+      {/* <PreviousDates />  */}
     </div>
   );
 }

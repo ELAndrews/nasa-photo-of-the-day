@@ -1,12 +1,11 @@
 import React from "react";
 
-function Header() {
+function Header(props) {
 
-  
   return (
     <div>
         <h1>NASA's Photo of the Day </h1>
-        <span>  ... date ... </span>
+        <p> {props.photoData.date} </p>
     </div>
   );
 }
