@@ -21,6 +21,14 @@
 
 .App-link {
   color: #61dafb;
+  font-size: 2rem;
+  padding: 8px 20px;
+  border-radius: 25px;;
+}
+
+.App-link:hover {
+  background-color:  #61dafb;
+  color: white;
 }
 
 @keyframes App-logo-spin {
