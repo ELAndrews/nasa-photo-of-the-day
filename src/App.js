@@ -8,9 +8,12 @@ import axios from "axios";
 
 function App() {
 
+  function formatDate() {
+  }
+
   const [photoState, setPhotoState] = useState();
   const [photoData, setPhotoData] = useState([]);
-  const [selectedDate, setSelectedDate] = useState('')
+  const [selectedDate, setSelectedDate] = useState(formatDate())
   const nasaAPI =(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${selectedDate}`);
 
   useEffect(() => {
