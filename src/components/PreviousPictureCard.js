@@ -5,7 +5,7 @@ function PreviousPictureCards() {
   
   return (
     <div>
-      <img src=""/>
+      <img src="" alt=""/>
       <span>Photo title</span>
       <p>...date...</p>
     </div>
