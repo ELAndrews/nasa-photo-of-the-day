@@ -1,7 +1,8 @@
 import "./App.css";
 import Header from './components/Header';
 import PictureCard from './components/PictureCard';
-// import PreviousDates from './components/PreviousDates';
+import Discover from './components/Discover';
+import PreviousDates from './components/PreviousDates';
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -24,12 +25,13 @@ function App() {
 
   return (
     <div className="App">
+      <Discover />
       <Header 
        photoData = {photoData}/>
       <PictureCard 
       photoState = {photoState}
       photoData = {photoData}/>
-      {/* <PreviousDates />  */}
+      <PreviousDates /> 
     </div>
   );
 }

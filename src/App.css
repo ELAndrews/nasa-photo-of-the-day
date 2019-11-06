@@ -44,7 +44,7 @@
   line-height: 1.6;
   width: 80%;
   max-width: 900px;
-  margin: 0px auto;
+  margin: 50px auto;
 }
 
 .mainPhoto {
@@ -54,4 +54,39 @@
 .photoInfo {
   padding: 0px 40px;
   text-align: left;
+}
+
+.previousDates {
+  background-color: #282c34;
+  color: white;
+}
+
+.previousCards {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.Discover {
+  background-color: rgb(209, 211, 212);
+  border: 1px solid #282c34;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+  top: 150px;
+  left: -15px;
+  position: fixed;
+}
+
+.date, .disBtn{
+  background-color: rgb(209, 211, 212);
+  font-size: 1.2rem;
+  padding: 5px;
+  font-family: inherit;
+}
+
+.disBtn{
+  border: none;
 }

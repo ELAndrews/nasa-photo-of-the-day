@@ -5,11 +5,13 @@ function PreviousDates() {
 
   
   return (
-    <div>
-      <PreviousPictureCard />
-      <PreviousPictureCard />
-      <PreviousPictureCard />
-      <PreviousPictureCard />
+    <div className="previousDates">
+      <div className="previousCards">
+        <PreviousPictureCard />
+        <PreviousPictureCard />
+        <PreviousPictureCard />
+        <PreviousPictureCard />
+      </div>
     </div>
   );
 }
