@@ -3,7 +3,8 @@ import React  from "react";
 
 function PictureCard(props) {
 
-console.log(props);
+  console.log(props);
+  
   return (
     <div className="pictureCard">
       <h1> {props.photoData.title} </h1>

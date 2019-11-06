@@ -19,26 +19,31 @@ function App() {
   const [photoState, setPhotoState] = useState();
   const [photoData, setPhotoData] = useState([]);
   const [selectedDate, setSelectedDate] = useState(formatDate())
-  const nasaAPI =(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${selectedDate}`);
-
+  const nasaAPI = (`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${selectedDate}`);
+  
   useEffect(() => {
+
     axios.get(nasaAPI)
       .then(response => {
         console.log(response)
         setPhotoState(response.data.hdurl)
         setPhotoData(response.data)
+        console.log(nasaAPI);
+
+        return () => {
+          console.log('Component clean up');
+      }
       })
       .catch(error => {
         console.log(`error collecting data`)
       })
-  }, []) 
+  }, [nasaAPI]) 
 
   console.log(selectedDate);
 
   return (
     <div className="App">
       <Discover 
-      selectedDate={selectedDate}
       setSelectedDate={setSelectedDate}/>
       <Header 
        photoData = {photoData}/>
