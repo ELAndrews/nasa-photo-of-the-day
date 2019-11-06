@@ -1,9 +1,13 @@
 import React from "react";
 import "./App.css";
+import Header from './components/Header';
+import PictureCard from './components/PictureCard';
+import PreviousDates from './components/PreviousDates';
+
 
 function App() {
 
-  
+
   return (
     <div className="App">
       <Header />
