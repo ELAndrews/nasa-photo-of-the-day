@@ -71,7 +71,7 @@ function App() {
         photoState = {photoState}
         photoData = {photoData}/>
         <PreviousDates 
-         selectedDate ={selectedDate}/>
+         />
       </AppDiv>
   );
 }

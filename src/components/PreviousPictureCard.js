@@ -6,12 +6,23 @@ import moment from 'moment';
 const SmallPhotoCard = styled.div`
   max-width: 20%;
   text-align: center;
+
+  &:hover{
+    transform: scale(1.2);
+  }
 `;
 
 const SmallPhoto = styled.img`
-  width: 100%;
-  height: auto;
-  opacity: 0.6;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  opacity: 0.4;
+`;
+
+const Info = styled.div`
+  position: relative;
+  bottom: 180px;
+  padding: 10px;
 `;
 
 const Span = styled.span`
@@ -21,15 +32,18 @@ const Span = styled.span`
 
 function PreviousPictureCards(props) {
 
-  function formatDate() {
-    let today = new Date();
-    let todayStr = moment(today).format('YYYY-MM-DD');
+const newDate = new Date(props.data._d)
 
-    return todayStr;
+  function formatDate(data) {
+    let date = new Date(data);
+    let dateStr = moment(date).format('YYYY-MM-DD');
+
+    return dateStr;
   }
+
   const [previousPhotoState, setPreviousPhotoState] = useState();
   const [previousPhotoData, setPreviousPhotoData] = useState([]);
-  const [nasaAPIOld, setnasaAPIOld] = useState(`https://api.nasa.gov/planetary/apod?api_key=krL1cCbGBXpZ5c5cti1GnKp60Z8ueT8RqpypcSlY&date=${formatDate(Date())}`);
+  const nasaAPIOld = `https://api.nasa.gov/planetary/apod?api_key=krL1cCbGBXpZ5c5cti1GnKp60Z8ueT8RqpypcSlY&date=${formatDate(newDate)}`;
 
   useEffect(() => {
 
@@ -46,8 +60,10 @@ function PreviousPictureCards(props) {
   return (
     <SmallPhotoCard>
       <SmallPhoto src={previousPhotoState} alt={previousPhotoData.title}/>
-      <Span>{previousPhotoData.title}</Span>
-      <p>{previousPhotoData.date}</p>
+      <Info>
+        <Span>{previousPhotoData.title}</Span>
+        <p>{previousPhotoData.date}</p>
+      </Info>
     </SmallPhotoCard>
   );
 }

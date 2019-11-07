@@ -4,17 +4,19 @@ import styled from 'styled-components';
 import moment from "moment";
 
 const PreviousDatesDiv = styled.div`
+  width: 100%;
   background-color: #282c34;
   color: white;
   position: relative;
   bottom: 10px;
   right: 8px;
-  padding: 50px 20px;;
+  padding: 100px 20px 50px;
 `;
 
 const CardContainer = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: row-reverse;
+  align-content: center;
   justify-content: space-evenly;
 `;
 
@@ -23,7 +25,7 @@ function PreviousDates(props) {
 let datesArray = [];
 
 for(let i = 1; i < 5; i++) {
-  datesArray.push(moment().subtract(i, 'days').calendar());
+  datesArray.push(moment().subtract(i, 'days'));
 }
 
   return (
@@ -33,7 +35,7 @@ for(let i = 1; i < 5; i++) {
           datesArray.map((curr, index) => {
             return (
               <PreviousPictureCard 
-              date = {curr}
+              data = {curr}
               key = {index}
              /> 
             )
