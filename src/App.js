@@ -1,4 +1,4 @@
-import "./App.css";
+// import "./App.css";
 import Header from './components/Header';
 import PictureCard from './components/PictureCard';
 import Discover from './components/Discover';
@@ -6,6 +6,25 @@ import PreviousDates from './components/PreviousDates';
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import moment from "moment";
+import styled from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
+
+
+const GlobalStyle = createGlobalStyle`
+  body {
+      margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+`;
+
+const AppDiv = styled.div`
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New";
+`;
+
 
 function App() {
 
@@ -39,22 +58,23 @@ function App() {
   }, [nasaAPI]);
 
   
-
-  
   return ( 
-    <div className="App">
-      <Discover 
-      formatDate = {formatDate}
-      setnasaAPI = {setnasaAPI}
-      selectedDate ={selectedDate}
-      setSelectedDate={setSelectedDate}/>
-      <Header 
-       photoData = {photoData}/>
-      <PictureCard 
-      photoState = {photoState}
-      photoData = {photoData}/>
-      <PreviousDates /> 
-    </div>
+
+   
+      <AppDiv>
+        <Discover 
+        formatDate = {formatDate}
+        setnasaAPI = {setnasaAPI}
+        selectedDate ={selectedDate}
+        setSelectedDate={setSelectedDate}/>
+        <Header 
+        photoData = {photoData}/>
+        <PictureCard 
+        photoState = {photoState}
+        photoData = {photoData}/>
+        <PreviousDates /> 
+      </AppDiv>
+
   );
 }
 
