@@ -20,15 +20,13 @@ function App() {
   const [photoData, setPhotoData] = useState([]);
   const [selectedDate, setSelectedDate] = useState(formatDate())
   const [nasaAPI, setnasaAPI] = useState(`https://api.nasa.gov/planetary/apod?api_key=krL1cCbGBXpZ5c5cti1GnKp60Z8ueT8RqpypcSlY&date=${formatDate(Date())}`);
-  console.log(nasaAPI)
+
   useEffect(() => {
 
     axios.get(nasaAPI)
       .then(response => {
-        console.log(response)
         setPhotoState(response.data.hdurl)
-        setPhotoData(response.data)
-        console.log(nasaAPI);
+        setPhotoData(response.data);
 
         return () => {
           console.log('Component clean up');

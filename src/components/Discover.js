@@ -1,4 +1,36 @@
 import React, { useEffect } from "react";
+import styled from 'styled-components';
+
+const DiscoverDiv = styled.div`
+    color: white;
+    background-color: rgb(146, 149, 150);
+    border: 1px solid #282c34;
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    top: 150px;
+    left: -15px;
+`;
+
+const Span = styled.span`
+    color: white;
+    background-color: rgb(146, 149, 150);
+    font-size: 1.2rem;
+    padding: 5px;
+    font-family: inherit;
+    border: none;
+`;
+  
+const Date = styled.input`
+    color: white;
+    background-color: rgb(146, 149, 150);
+    font-size: 1.2rem;
+    padding: 5px;
+    font-family: inherit;
+`;
+
 
 function Discover(props) {
     
@@ -18,10 +50,10 @@ function Discover(props) {
     }, [])
     
   return (
-    <div className="Discover">
-        <input type="date" className="date"></input>
-        <span className="disBtn">Discover more...</span>
-    </div>
+    <DiscoverDiv>
+        <Date type="date"></Date>
+        <Span>Discover more...</Span>
+    </DiscoverDiv>
   );
 }
 
