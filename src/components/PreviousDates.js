@@ -1,18 +1,29 @@
 import React from "react";
 import PreviousPictureCard from './PreviousPictureCard';
+import styled from 'styled-components';
+
+const PreviousDatesDiv = styled.div`
+  background-color: #282c34;
+  color: white;
+`;
+
+const CardContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+`;
 
 function PreviousDates() {
 
-  
   return (
-    <div className="previousDates">
-      <div className="previousCards">
-        {/* <PreviousPictureCard />
+    <PreviousDatesDiv>
+      <CardContainer>
         <PreviousPictureCard />
         <PreviousPictureCard />
-        <PreviousPictureCard /> */}
-      </div>
-    </div>
+        <PreviousPictureCard />
+        <PreviousPictureCard />
+      </CardContainer>
+    </PreviousDatesDiv>
   );
 }
 
