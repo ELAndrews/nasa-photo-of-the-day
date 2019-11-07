@@ -12,6 +12,8 @@ const DiscoverDiv = styled.div`
     position:absolute;
     top: 150px;
     left: -15px;
+    z-index: 1;
+    position: fixed;
 `;
 
 const Span = styled.span`
@@ -38,6 +40,7 @@ function Discover(props) {
         function handleChange (e) {
             props.setSelectedDate(e.target.value);
             props.setnasaAPI(`https://api.nasa.gov/planetary/apod?api_key=krL1cCbGBXpZ5c5cti1GnKp60Z8ueT8RqpypcSlY&date=${e.target.value}`)
+
         }
         const dateInput = document.querySelector('input')
         dateInput.addEventListener('change', handleChange)

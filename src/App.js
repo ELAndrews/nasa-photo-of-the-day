@@ -12,7 +12,7 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   body {
-      margin: 0;
+    margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
       "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
       sans-serif;
@@ -59,22 +59,20 @@ function App() {
 
   
   return ( 
-
-   
-      <AppDiv>
+    <AppDiv>
+        <Header 
+        photoData = {photoData}/>
         <Discover 
         formatDate = {formatDate}
         setnasaAPI = {setnasaAPI}
         selectedDate ={selectedDate}
         setSelectedDate={setSelectedDate}/>
-        <Header 
-        photoData = {photoData}/>
         <PictureCard 
         photoState = {photoState}
         photoData = {photoData}/>
-        <PreviousDates /> 
+        <PreviousDates 
+         selectedDate ={selectedDate}/>
       </AppDiv>
-
   );
 }
 

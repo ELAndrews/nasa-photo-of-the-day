@@ -3,13 +3,18 @@ import styled, { keyframes } from 'styled-components';
 
 const HeaderDiv = styled.div`
    background-color: #282c34;
-   min-height: 100vh;
+   min-height: 100vh; 
+   width: 100vw;
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
    font-size: calc(10px + 2vmin);
    color: white;
+   margin: 0px;
+   position: relative;
+   bottom: 10px;
+   right: 8px;
 `;
 
 const LogoSpin = keyframes`
@@ -33,10 +38,10 @@ const Button = styled.button`
   padding: 8px 20px;
   border-radius: 25px;
 
-  &:hover {
-  background-color:  #61dafb;
-  color: white;
-}
+    &:hover {
+    background-color:  #61dafb;
+    color: white;
+  }
 `;
 
 const H1 = styled.h1`
@@ -45,16 +50,11 @@ const H1 = styled.h1`
 `;
 
 
-// .App {
-//   text-align: center;
-// }
-
 function Header(props) {
 
 const handleClick = (event) => {
   event.preventDefault();
   window.scrollBy(0, window.innerHeight)
-  // console.log("click registered")
 }
 
   return (

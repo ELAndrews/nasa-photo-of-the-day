@@ -33,8 +33,6 @@ const Info = styled.p`
 
 
 function PictureCard(props) {
-
-  console.log(props);
   
   return (
     <PictureCardDiv>
