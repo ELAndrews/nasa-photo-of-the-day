@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -21,6 +21,14 @@
 
 .App-link {
   color: #61dafb;
+  font-size: 2rem;
+  padding: 8px 20px;
+  border-radius: 25px;;
+}
+
+.App-link:hover {
+  background-color:  #61dafb;
+  color: white;
 }
 
 @keyframes App-logo-spin {
@@ -30,4 +38,57 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+/* .pictureCard {
+  line-height: 1.6;
+  width: 80%;
+  max-width: 900px;
+  margin: 50px auto;
 }
+
+.mainPhoto {
+  width: 100%
+}
+
+.photoInfo {
+  padding: 0px 40px;
+  text-align: left;
+} */
+
+/* .previousDates {
+  background-color: #282c34;
+  color: white;
+}
+
+.previousCards {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+} */
+
+/* .Discover {
+  color: white;
+  background-color: rgb(146, 149, 150);
+  border: 1px solid #282c34;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+  top: 150px;
+  left: -15px;
+  position: fixed;
+}
+
+.date, .disBtn{
+  color: white;
+  background-color: rgb(146, 149, 150);
+  font-size: 1.2rem;
+  padding: 5px;
+  font-family: inherit;
+}
+
+.disBtn{
+  border: none;
+} */
